@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | Rohit Tomar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .gradient-text {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(90deg, #4285F4, #34A853);
+        }
+    </style>
+    <!-- GTM Placeholder for Conversion Tag -->
+    <!-- Put GTM code here -->
+</head>
+<body class="bg-gray-50 flex items-center justify-center h-screen font-sans">
+    
+    <div class="max-w-md w-full bg-white p-10 rounded-xl shadow-lg border border-gray-200 text-center">
+        <h1 class="text-4xl font-extrabold mb-4"><span class="gradient-text">Connection Recorded</span></h1>
+        <p class="text-gray-600 mb-8">Thank you! Your information has been securely captured.</p>
+        
+        <div class="bg-gray-100 p-4 rounded-lg text-left text-sm font-mono text-gray-700 overflow-wrap-break-word">
+            <strong>Diagnostic Check (For DaD Testing):</strong><br><br>
+            If you set up GTM Enhanced Conversions correctly, the Email and LinkedIn fields from the previous page were just securely hashed and sent back to Google Ads.<br><br>
+            <span id="gclid-output"></span>
+        </div>
+
+        <a href="index.html" class="inline-block mt-8 text-blue-600 font-medium hover:underline">&larr; Back to Portfolio</a>
+    </div>
+
+    <script>
+        // Diagnostic display of GCLID to prove to the user their parameters are passing nicely
+        const storedGclid = localStorage.getItem('gclid');
+        if (storedGclid) {
+            document.getElementById('gclid-output').innerHTML = `<strong>Stored GCLID Found:</strong><br>${storedGclid}`;
+        } else {
+            document.getElementById('gclid-output').innerHTML = `<em>No GCLID found in local storage. (Normal if you didn't click an ad to get here).</em>`;
+        }
+    </script>
+</body>
+</html>
