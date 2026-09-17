@@ -304,7 +304,7 @@ document.getElementById('leadForm').addEventListener('submit', function(e) {
     var urlEncoded = new URLSearchParams(formData).toString();
     
     // Send it to your Apps Script in the background
-    fetch("https://script.google.com/a/macros/google.com/s/AKfycbxR-kSpsTr5Gz6jFwBtPGNoiq3uE_03KoM5xCCK59UP5vEstq96skSGP_QgFNpIsydMSg/exec", {
+    fetch("https://script.google.com/macros/s/AKfycbzPOi9IsDUZjNQAk9UUqQDYiccA6FeBFoFochHMINbIOjQBlJ235D7R0kzpXMUhswYR/exec", {
         method: "POST",
         body: urlEncoded,
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
